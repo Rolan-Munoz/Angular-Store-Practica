@@ -11,3 +11,5 @@ tienda. Añadimos el enrutamiento necesario para ambos componentes.
 3: Se han creado los dos componentes y su enrutamiento, dejamos el contenido y diseño de los mismos para una etapa posterior, pues en ellos 
 habra informacion que nos proveera diferentes componentes y servicios que inyectaremos en ellos.
 
+4: Creamos un service que no servira para conectarnos a la API y extraer la informacion que necesitamos. Posteriormente esta informacion, 
+se visualizara a traves del componente productos y sus subcomponentes como producto y ficha producto.
