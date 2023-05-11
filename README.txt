@@ -13,3 +13,8 @@ habra informacion que nos proveera diferentes componentes y servicios que inyect
 
 4: Creamos un service que no servira para conectarnos a la API y extraer la informacion que necesitamos. Posteriormente esta informacion, 
 se visualizara a traves del componente productos y sus subcomponentes como producto y ficha producto.
+
+5: Necesitamos crear una interfaz para los productos y esta inyectarla en el service.
+
+6: Llegados a este punto observamos la necesidad de crear un modulo store para agrupar todas las funcionalidades y necesidades que nos hemos
+encontrado que estan relacionadas entre ellas.

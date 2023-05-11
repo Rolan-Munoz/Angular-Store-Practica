@@ -1,0 +1,36 @@
+img {
+    height: 150px;
+    width: 150px;
+    margin: auto;
+    position: relative;
+}
+
+.ficha {
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+}
+
+h5 {
+    text-align: start;
+    margin-left: 10px;
+}
+
+.contenedor-imagen {
+    position: relative;
+    display: inline-block;
+}
+
+.fa-heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: rgb(11, 11, 227);
+
+}
+
+.fa-heart.favorito {
+    color: rgb(234, 7, 7);
+}
+
+

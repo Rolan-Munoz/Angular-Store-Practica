@@ -1,0 +1,30 @@
+
+
+
+
+<div class="container row justify-content-center mt-5 ms-5" *ngIf="producto">
+    <div class="col-3 m-5">
+        <img class="img-principal" [src]="producto.imagen" alt="{{producto.nombre}}">
+    </div>
+    <div class="col-6 m-5">
+        <p>{{producto.categoria}}</p>
+        <h2>{{producto.nombre}}</h2>
+        <ng-container *ngIf="!producto.precioRebajado; else precioRebajado">
+            <p>{{producto.precio | currency:'EUR':'symbol':'1.2-2':'es-ES'}}</p>
+        </ng-container>
+        <ng-template #precioRebajado>
+            <div class="d-flex">
+            <p><del>{{producto.precio | currency:'EUR':'symbol':'1.2-2':'es-ES'}}</del></p>
+            <p class="text-danger mx-2">{{producto.precioRebajado | currency:'EUR':'symbol':'1.2-2':'es-ES'}}</p>
+            </div>
+        </ng-template>
+        <p>{{producto.descripcion}}</p>
+        <img class="img-secundaria" [src]="producto.imagen" alt="{{producto.nombre}}">
+        <p class="mt-2">Tallas disponibles</p>
+        <p class="tallas">{{ producto.tallas.length ? producto.tallas.join(" - ") : "No hay stock" }}</p>
+        <button class="boton">Añadir cesta</button>
+        <button class="boton fav">Añadir favorito</button>
+    </div>
+    
+</div>
+

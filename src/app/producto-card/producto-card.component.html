@@ -1,0 +1,25 @@
+
+<div class="ficha " *ngIf="producto">
+    <div class=" m-auto" style="max-width: 200px;">
+        <div  (click)="pulsarBoton()" class=" g-0">
+            <div class="contenedor-imagen">
+                <img [src]="producto.getImagen()" class="img-fluid rounded" alt="...">
+                <i class="fa fa-heart fa-lg" [class.favorito]="producto.favorito"></i>
+            </div>
+        <div >
+            <div>
+            <h5 class="card-title text-center">{{producto.getNombre()}}</h5>
+            <ng-container *ngIf="!producto.getPrecioRebajado(); else precioRebajado">
+                <p class="card-text m-1"><small class="text-body-secondary">{{producto.getPrecio() | currency:'EUR':'symbol':'1.2-2':'es-ES'}}</small></p>
+            </ng-container>
+            <ng-template #precioRebajado>
+                <div class="d-flex justify-content-center">
+                <p class="card-text m-1"><small class="text-body-secondary"><del>{{producto.getPrecio() | currency:'EUR':'symbol':'1.2-2':'es-ES'}}</del></small></p>
+                <p class="card-text m-1"><small class="text-danger">{{producto.getPrecioRebajado() | currency:'EUR':'symbol':'1.2-2':'es-ES'}}</small></p>
+                </div>
+            </ng-template>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

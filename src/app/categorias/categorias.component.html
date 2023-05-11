@@ -1,0 +1,6 @@
+<div class="categorias">
+    <div class="categoria" *ngFor="let categoria of categorias">
+        <img (click)="navegarCategoria()" [src]="categoria.getImagen()" class="d-block categoriaImg" alt="...">
+        <h4>{{categoria.getCategorias()}}</h4>
+    </div>
+</div>

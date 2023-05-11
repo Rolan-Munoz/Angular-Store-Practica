@@ -1,0 +1,6 @@
+
+
+
+<div class="cards row container m-auto">
+    <app-producto-card class="col-3" *ngFor="let producto of productos" [producto]="producto" (click)="navegarAFicha($event)"></app-producto-card>
+</div>
